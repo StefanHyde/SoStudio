@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@theme {
+  --color-palmier: #297373;
+  --color-mer: #8edce6;
+  --color-orange: #ff8552;
+  --color-corail: #f2545b;
+  --color-sable: #f2d858;
+  --color-plage: #fcf3e3;
+  --color-nuit: #3b4c4e;
+  --color-blanc: #f7f7f7;
+}
