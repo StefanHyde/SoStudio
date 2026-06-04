@@ -13,7 +13,7 @@
   --font-dm-serif: "var(--font-dm-serif)";
   --font-public-sans: "var(--font-public-sans)";
 
-  --text-h1: 72px;
-  --text-h2: 40px;
-  --text-p: 20px;
+  --font-h1: 72px;
+  --font-h2: 40px;
+  --font-p: 20px;
 }
