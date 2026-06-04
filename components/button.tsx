@@ -10,7 +10,7 @@ export default function Button({ children, variant = "primary", className = "", 
 
   return (
     <button
-      className={`p-4 rounded-3xl text-p uppercase transition ease-in-out 300ms cursor-pointer ${btnStyles} ${className}`}
+      className={`p-3 md:p-4 rounded-3xl text-p uppercase transition ease-in-out 300ms cursor-pointer ${btnStyles} ${className}`}
       {...props}
     >
       {children}
