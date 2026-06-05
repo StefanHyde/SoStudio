@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { DM_Serif_Display, Public_Sans } from "next/font/google";
 import "./globals.css";
 
+import Header from "../components/header";
+
 const DmSerif = DM_Serif_Display({
   variable: "--font-dm-serif",
   subsets: ["latin"],
@@ -25,7 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${DmSerif.variable} ${publicSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
