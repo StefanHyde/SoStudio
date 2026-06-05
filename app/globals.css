@@ -13,7 +13,9 @@
   --font-dm-serif: "var(--font-dm-serif)";
   --font-public-sans: "var(--font-public-sans)";
 
-  --text-text-h1: 72px;
-  --text-text-h2: 40px;
-  --text-text-p: 20px;
+  --text-h1: 72px;
+  --text-h2: 40px;
+  --text-p: 20px;
+
+  --radius-2xl: 24px;
 }
