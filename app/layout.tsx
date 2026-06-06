@@ -3,6 +3,7 @@ import { DM_Serif_Display, Public_Sans } from "next/font/google";
 import "./globals.css";
 
 import Header from "../components/header";
+import Footer from "@/components/footer";
 
 const DmSerif = DM_Serif_Display({
   variable: "--font-dm-serif",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
