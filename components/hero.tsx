@@ -6,7 +6,7 @@ import Button from "./button";
 
 export default function Hero() {
   return (
-    <div className="relative w-full md:w-2/3 xl:w-1/2 mx-auto flex flex-col justify-center items-center p-8 mt-20">
+    <div className="relative w-full md:w-2/3 xl:w-1/2 mx-auto flex flex-col justify-center items-center p-8 mt-40 mb-20">
       <Image src={palmierLogo} height={80} alt="Logo Studio Owl" className="absolute right-0 -top-8" />
       <div className=" text-palmier text-center gap-3">
         <h1 className="font-dm-serif text-2xl md:text-h2 ">Et si c’était So facile</h1>
