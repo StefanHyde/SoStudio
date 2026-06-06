@@ -9,7 +9,7 @@ export default function CustomerReviews() {
           {!review.picture ? (
             <div className="h-10 w-10  min-w-10 rounded-full bg-corail"></div>
           ) : (
-            <div className="h-10 w-10 min-w-10 rounded-full">
+            <div className="h-10 w-10 min-w-10 border-2 border-corail rounded-full">
               <Image src={review.picture} height={40} width={40} alt={review.name} className="object-cover" />
             </div>
           )}
