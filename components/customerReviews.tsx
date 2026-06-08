@@ -3,9 +3,9 @@ import { customerReviews } from "@/lib/data/customerReviews";
 
 export default function CustomerReviews() {
   return (
-    <div className="flex flex-wrap justify-center items-center py-20 px-8 md:px-30 gap-12">
+    <div className="grid grid-cols-1 xl:grid-cols-3 w-full md:w-4/5 justify-center items-center py-20 px-8 md:px-30 gap-12">
       {customerReviews.map((review, index) => (
-        <div key={index} className="flex w-[320px]  p-4 gap-4 bg-blanc shadow-md/20 rounded-md">
+        <div key={index} className="flex -w-[320px]  p-6 gap-4 bg-blanc shadow-md/20 rounded-md">
           {!review.picture ? (
             <div className="h-10 w-10  min-w-10 rounded-full bg-corail"></div>
           ) : (
