@@ -5,12 +5,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({ children, variant = "primary", className = "", ...props }: ButtonProps) {
   const btnStyles =
     variant === "primary"
-      ? "bg-orange text-plage hover:bg-corail"
-      : "bg-transparent border-1 border-orange text-orange hover:bg-orange hover:text-plage";
+      ? "bg-orange text-plage hover:bg-corail uppercase"
+      : "bg-transparent border-1 border-orange text-orange hover:bg-orange hover:text-plage normal-case";
 
   return (
     <button
-      className={`p-3 md:p-4 rounded-2xl text-sm md:text-p uppercase transition ease-in-out 300ms cursor-pointer ${btnStyles} ${className}`}
+      className={`p-3 md:p-4 rounded-2xl text-sm md:text-p  transition ease-in-out 300ms cursor-pointer ${btnStyles} ${className}`}
       {...props}
     >
       {children}
