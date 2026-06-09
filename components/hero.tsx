@@ -4,7 +4,8 @@ import palmierLogo from "@/images/logotype3.png";
 
 import Button from "./button";
 
-import Content, { heroTitle, heroSubtitle, heroCTA, heroBtn } from "@/content/hero.mdx";
+import Content from "@/content/hero.mdx";
+import { heroTitle, heroSubtitle, heroCTA, heroBtn } from "@/content/hero";
 
 export default function Hero() {
   return (
