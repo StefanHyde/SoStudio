@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="flex justify-center">
         <Image
           src={footerLogo}
-          alt="Logo Studio Owl"
+          alt="Logo SO Studio"
           height={74}
           className="object-contain w-1/2 md:w-full md:h-full pb-4"
           priority
