@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Button from "@/components/button";
+import CalendlyEmbed from "@/components/calendyForm";
 import logo from "@/images/logo.png";
 
 export default function Header() {
@@ -12,7 +13,9 @@ export default function Header() {
       <div className="flex">
         <Image src={logo} alt="Logo Studio Owl" height={38} className="object-contain h-8 md:h-full" priority />
       </div>
-      <Button variant="primary">Prendre RDV</Button>
+      <CalendlyEmbed>
+        <Button variant="primary">Prendre RDV</Button>
+      </CalendlyEmbed>
     </header>
   );
 }
