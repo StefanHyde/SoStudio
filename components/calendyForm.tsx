@@ -8,10 +8,7 @@ interface CalendlyEmbedProps {
   children?: React.ReactNode;
 }
 
-export default function CalendlyEmbed({
-  url = "https://calendly.com/contact-so-studio/30min?text_color=383636&primary_color=297373",
-  children,
-}: CalendlyEmbedProps) {
+export default function CalendlyEmbed({ url = process.env.NEXT_PUBLIC_CALENDLY_URL, children }: CalendlyEmbedProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
