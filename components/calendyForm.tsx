@@ -8,9 +8,8 @@ interface CalendlyEmbedProps {
   children?: React.ReactNode;
 }
 
-export default function CalendlyEmbed({ url, children }: CalendlyEmbedProps) {
+export default function CalendlyEmbed({ url = process.env.NEXT_PUBLIC_CALENDLY_URL, children }: CalendlyEmbedProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const calendlyUrl = url || process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/stephane-studioowl/30min";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -38,11 +37,7 @@ export default function CalendlyEmbed({ url, children }: CalendlyEmbedProps) {
         </DialogDescription>
 
         <div className="flex-1 h-full overflow-y-auto">
-          <div
-            className="calendly-inline-widget"
-            data-url={calendlyUrl}
-            style={{ height: "100%", minHeight: "700px" }}
-          />
+          <div className="calendly-inline-widget" data-url={url} style={{ height: "100%", minHeight: "700px" }} />
         </div>
       </DialogContent>
     </Dialog>
