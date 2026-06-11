@@ -1,11 +1,13 @@
 import Hero from "@/components/hero";
 import CustomerReviews from "@/components/customerReviews";
+import ArgumentsSection from "@/content/argumentsSection.mdx";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center font-sans bg-plage">
       <Hero />
       <CustomerReviews />
+      <ArgumentsSection />
     </div>
   );
 }
