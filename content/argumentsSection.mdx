@@ -44,16 +44,35 @@ import crossIcon from "@/images/cross.png";
 </ArgumentsSection>
 
 <ArgumentsSection
-  title="Parce que un bon site est efficace et rentable."
-  image={rightPicture}
+  title="Parce que un bon site est efficace et rentable"
+  image={leftPicture}
   imagePosition="left"
   argumentsList={[
-    { icon: checkIcon, text: "Améliore ta visibilité et vous permet de ne pas compter que sur la prospection." },
     {
       icon: checkIcon,
-      text: "Valorise l’experise et permet à vos prospets de comprendre directement votre univers et votre offre",
+      text: (
+        <>
+          <strong>Améliore ta visibilité</strong> et vous permet de ne pas compter que sur la prospection.
+        </>
+      ),
     },
-    { icon: checkIcon, text: "Soutient vos objectifs en s’adaptant à vos besoins, sans vous ruiner." },
+    {
+      icon: checkIcon,
+      text: (
+        <>
+          <strong>Valorise l’experise</strong> et permet à vos prospets de comprendre directement votre univers et votre
+          offre.
+        </>
+      ),
+    },
+    {
+      icon: checkIcon,
+      text: (
+        <>
+          <strong>Soutient vos objectifs</strong> en s’adaptant à vos besoins, sans vous ruiner.
+        </>
+      ),
+    },
   ]}
 >
   C’est un site qui soutient l’image d’un professionnel tout en le démarquant de ses concurrents. Bien conçu il :
