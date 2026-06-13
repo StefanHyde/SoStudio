@@ -1,6 +1,7 @@
 import Hero from "@/components/hero";
 import CustomerReviews from "@/components/customerReviews";
 import ArgumentsSection from "@/content/argumentsSection.mdx";
+import ProductsSection from "@/content/productsSection.mdx";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <CustomerReviews />
       <ArgumentsSection />
+      <ProductsSection />
     </div>
   );
 }
