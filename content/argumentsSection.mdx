@@ -4,8 +4,57 @@ import Image from "next/image";
 import rightPicture from "@/images/screen1.png";
 import leftPicture from "@/images/screen2.png";
 
+import checkIcon from "@/images/check.png";
+import crossIcon from "@/images/cross.png";
+
 <ArgumentsSection
   title="La question n’est plus de savoir si tu dois avoir un site"
   image={rightPicture}
   imagePosition="right"
-/>
+  argumentsList={[
+    {
+      icon: crossIcon,
+      text: (
+        <>
+          <strong>Qui valorise ton activité</strong> et convertit tes visiteurs en clients."
+        </>
+      ),
+    },
+    {
+      icon: crossIcon,
+      text: (
+        <>
+          <strong>Respecte ton budget annuel</strong> sans te demander 200e/an sans accompagnement
+        </>
+      ),
+    },
+    {
+      icon: crossIcon,
+      text: (
+        <>
+          <strong>Qui soit visible</strong> parce que quitte à investir du temps et de l’argent dedans, autant le faire
+          bien."
+        </>
+      ),
+    },
+  ]}
+>
+  Pour être visible et crédible, un site est une des étapes les plus importantes dans une activité. Sauf que, il faut
+  encore savoir en faire un :
+</ArgumentsSection>
+
+<ArgumentsSection
+  title="Parce que un bon site est efficace et rentable."
+  image={rightPicture}
+  imagePosition="left"
+  argumentsList={[
+    { icon: checkIcon, text: "Améliore ta visibilité et vous permet de ne pas compter que sur la prospection." },
+    {
+      icon: checkIcon,
+      text: "Valorise l’experise et permet à vos prospets de comprendre directement votre univers et votre offre",
+    },
+    { icon: checkIcon, text: "Soutient vos objectifs en s’adaptant à vos besoins, sans vous ruiner." },
+  ]}
+>
+  C’est un site qui soutient l’image d’un professionnel tout en le démarquant de ses concurrents. Bien conçu il :
+</ArgumentsSection>
