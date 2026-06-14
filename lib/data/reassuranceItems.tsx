@@ -23,7 +23,7 @@ export const reassuranceItems: items[] = [
   },
   {
     icon: umbrellaIcon,
-    title: "Accompagnement",
+    title: "Conseil",
     description: "Des échanges réguliers et un accompagnement sur vos tunnels de conversions",
   },
   {
