@@ -20,7 +20,9 @@ export default function Hero() {
           <CalendlyEmbed>
             <Button variant="primary">{hero.heroCTA}</Button>
           </CalendlyEmbed>
-          <Button variant="secondary">{hero.heroBtn}</Button>
+          <a href="#products">
+            <Button variant="secondary">{hero.heroBtn}</Button>
+          </a>
         </div>
         <Image src={corailLogo} height={80} alt="Logo Studio Owl" className="absolute left-0 -bottom-8" />
       </div>
