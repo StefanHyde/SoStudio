@@ -4,7 +4,7 @@ import handIcon from "@/images/hand.png";
 import iceIcon from "@/images/icecream.png";
 import penIcon from "@/images/pen.png";
 import phoneIcon from "@/images/phone.png";
-import plantIcon from "@/images/screen1.png";
+import plantIcon from "@/images/plant.png";
 import shieldIcon from "@/images/shield.png";
 import smileyIcon from "@/images/smiley.png";
 import umbrellaIcon from "@/images/umbrella.png";

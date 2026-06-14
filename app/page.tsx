@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import CustomerReviews from "@/components/customerReviews";
 import ArgumentsSection from "@/content/argumentsSection.mdx";
 import ProductsSection from "@/content/productsSection.mdx";
+import ReassuranceSection from "@/components/reassuranceSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <CustomerReviews />
       <ArgumentsSection />
       <ProductsSection />
+      <ReassuranceSection />
     </div>
   );
 }
