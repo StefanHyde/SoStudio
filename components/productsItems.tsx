@@ -20,7 +20,7 @@ interface productProps {
 function ProductFeature({ text }: productItemsProps) {
   return (
     <div className="flex gap-4 items-start first:mt-4">
-      <Image src={checkIcon} alt="" className="w-8 h-8 shrink-0" />
+      <Image src={checkIcon} alt="" className="w-4 md:w-8 h-4 md:h-8 shrink-0" />
       <p>{text}</p>
     </div>
   );
