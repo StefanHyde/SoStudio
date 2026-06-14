@@ -1,12 +1,123 @@
-import ProductsSection from "@/components/productsSection";
+import ProductsItems from "@/components/productsItems";
 
-import checkIcon from "@/images/check.png";
-import crossIcon from "@/images/cross.png";
+<div className="flex flex-col w-full  justify-center items-center last:mb-12 py-12 px-8  gap-12">
+<h1 className="font-dm-serif text-5xl md:text-h1 text-palmier text-center">Nos Solutions Soo Efficaces</h1>
 
-<ProductsSection
-  name="Landing Page"
-  description="Une seule page pour faire un tunnel de conversion optimisé. A partir de :"
-  price="1500"
->
-  Nos Solutions Soo Efficaces
-</ProductsSection>
+  <div className="flex flex-col xl:grid  xl:grid-cols-3 w-full 2xl:w-4/5 justify-center items-center gap-12">
+    <ProductsItems
+      name="Landing Page"
+      description="Une seule page pour faire un tunnel de conversion optimisé. A partir de :"
+      price="1500"
+      features={[
+        {
+          text: (
+            <>
+          <strong>Une page unique</strong> basée sur votre identité visuelle
+            </>
+          ),
+        },
+        {
+          text: (
+            <>
+              <strong>Un formulaire de contact</strong> 
+            </>
+          ),
+        },
+         {
+          text: (
+            <>
+              <strong>Optimisaton SEO</strong> pour plus de visibilité
+            </>
+          ),
+        },
+        {
+          text: (
+            <>
+              <strong>Mise en confirmité</strong> RGPD et mentions légales
+            </>
+          ),
+        },
+      ]}
+    />
+    <ProductsItems
+      name="Site Vitrine"
+      description="Un site pour présenter ses services, son univers et convaincre. A partir de"
+      price="1800"
+      isBestSell={true}
+      features={[
+        {
+          text: (
+            <>
+          <strong>3 à 5 pages</strong> basées sur votre identité visuelle 
+            </>
+          ),
+        },
+        {
+          text: (
+            <>
+              <strong>Un formulaire de contact ou de réservation</strong> 
+            </>
+          ),
+        },
+         {
+          text: (
+            <>
+              <strong>Un blog</strong>  pour partager vos dernières actualités 
+            </>
+          ),
+        },
+       {
+          text: (
+            <>
+              <strong>Optimisaton SEO</strong> pour plus de visibilité
+            </>
+          ),
+        },
+        {
+          text: (
+            <>
+              <strong>Mise en confirmité</strong> RGPD et mentions légales
+            </>
+          ),
+        },
+      ]}
+    />
+    <ProductsItems
+      name="E-Boutique"
+      description="L’incontournable des entreprises pour vendre 7j/7 et 24h/24. A partir de :"
+      price="2900"
+      features={[
+        {
+          text: (
+            <>
+          <strong>Site e-commerce</strong>  basé sur votre identité visuelle
+            </>
+          ),
+        },
+        {
+          text: (
+            <>
+              <strong>2 plateformes au choix</strong>  pour mieux s’adapter à vos besoins
+            </>
+          ),
+        },
+        
+       {
+          text: (
+            <>
+              <strong>Optimisaton SEO</strong> pour plus de visibilité
+            </>
+          ),
+        },
+        {
+          text: (
+            <>
+              <strong>Mise en confirmité</strong> RGPD et mentions légales
+            </>
+          ),
+        },
+      ]}
+    />
+
+  </div>
+</div>
