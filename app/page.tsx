@@ -3,6 +3,7 @@ import CustomerReviews from "@/components/customerReviews";
 import ArgumentsSection from "@/content/argumentsSection.mdx";
 import ProductsSection from "@/content/productsSection.mdx";
 import ReassuranceSection from "@/components/reassuranceSection";
+import AboutSection from "@/content/aboutSection.mdx";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ArgumentsSection />
       <ProductsSection />
       <ReassuranceSection />
+      <AboutSection />
     </div>
   );
 }
