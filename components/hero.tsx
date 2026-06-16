@@ -15,8 +15,7 @@ export default function Hero() {
       <div className=" text-palmier text-center gap-3">
         <h1 className="font-dm-serif text-2xl md:text-h2 ">{hero.heroTitle}</h1>
         <h2 className="font-dm-serif text-5xl md:text-h1">{hero.heroSubtitle}</h2>
-        <p className="text-normal md:text-p text-nuit my-6 whitespace-pre-line">{hero.heroDescription}</p>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4  my-12">
           <CalendlyEmbed>
             <Button variant="primary">{hero.heroCTA}</Button>
           </CalendlyEmbed>
