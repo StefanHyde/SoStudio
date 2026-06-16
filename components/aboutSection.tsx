@@ -1,9 +1,11 @@
 import Image, { StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 
+import Button from "@/components/button";
+
 import leaPicture from "@/images/lea_pic.jpeg";
 import stephanePicture from "@/images/stepahen_pic.jpg";
-import logoOrange from "@/images/logotype2.png";
+import logoOrange from "@/images/logotypebg.png";
 
 interface AboutWishesProps {
   icon?: StaticImageData;
@@ -16,18 +18,32 @@ interface AboutProps {
   wishListDescription: string;
   children: ReactNode;
   wishesList?: AboutWishesProps[];
+  ctaText?: string;
+  ctaBtn?: boolean;
+  ctaBtnText?: string;
+  ctaLink: string;
 }
 
 function AboutWishes({ icon, text }: AboutWishesProps) {
   return (
-    <div className="flex gap-4 items-start">
+    <div className="flex gap-4  items-center">
       {icon && <Image src={icon} alt="" className="w-4 md:w-8 h-4 md:h-8 shrink-0" />}
       <p>{text}</p>
     </div>
   );
 }
 
-export default function AboutSection({ title, wishListTitle, children, wishesList, wishListDescription }: AboutProps) {
+export default function AboutSection({
+  title,
+  wishListTitle,
+  children,
+  wishesList,
+  wishListDescription,
+  ctaText,
+  ctaBtn,
+  ctaBtnText,
+  ctaLink,
+}: AboutProps) {
   return (
     <div className="flex flex-col w-full  justify-center items-center last:mb-12 py-12 px-8  gap-12">
       <h1 className="font-dm-serif text-5xl md:text-h1 text-palmier text-center">Soo bien accompagné</h1>
@@ -52,13 +68,15 @@ export default function AboutSection({ title, wishListTitle, children, wishesLis
             />
           </div>
         </div>
-        <h1 className="font-dm-serif text-h2 text-palmier text-center mb-3 ">{title}</h1>
+        <h1 className="font-dm-serif text-3xl md:text-h2 text-palmier text-center mb-3 ">{title}</h1>
         <p className="prose text-normal max-w-none text-center">{children}</p>
       </div>
-      <div className="flex  flex-col justify-center items-center">
-        <div className="w-1/2">
-          <h1 className="font-dm-serif text-h2 text-palmier text-center ">{wishListTitle}</h1>
-          <p className="text-center text-normal">{wishListDescription}</p>
+      <div className="flex flex-row justify-center items-center w-full gap-2">
+        <div className="flex-col lg:w-1/2">
+          <h1 className="font-dm-serif text-3xl md:text-h2 text-palmier text-center lg:text-left mb-3">
+            {wishListTitle}
+          </h1>
+          <p className="text-center lg:text-left text-normal mb-3">{wishListDescription}</p>
           {wishesList && (
             <div className="flex flex-col gap-4">
               {wishesList.map((wish, index) => (
@@ -66,8 +84,18 @@ export default function AboutSection({ title, wishListTitle, children, wishesLis
               ))}
             </div>
           )}
+          {ctaText && <p className="text-center lg:text-left text-normal my-4">{ctaText}</p>}
+          {ctaBtn && (
+            <a href={ctaLink} target="_blank" className="flex justify-center lg:justify-start">
+              <Button className="text-center " variant="secondary">
+                {ctaBtnText}
+              </Button>
+            </a>
+          )}
         </div>
-        <Image className="justify-center hidden lg:flex w-1/2" src={logoOrange} width={280} height={280} alt="" />
+        <div className=" hidden lg:flex">
+          <Image className="justify-center" src={logoOrange} width={280} height={280} alt="" />
+        </div>
       </div>
     </div>
   );
