@@ -4,6 +4,7 @@ import ArgumentsSection from "@/content/argumentsSection.mdx";
 import ProductsSection from "@/content/productsSection.mdx";
 import ReassuranceSection from "@/components/reassuranceSection";
 import AboutSection from "@/content/aboutSection.mdx";
+import TimelineSection from "@/content/timelineSection.mdx";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductsSection />
       <ReassuranceSection />
       <AboutSection />
+      <TimelineSection />
     </div>
   );
 }

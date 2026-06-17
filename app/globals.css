@@ -148,3 +148,7 @@
     @apply font-sans;
   }
 }
+
+.prose li::marker {
+  color: #3b4c4e !important;
+}
