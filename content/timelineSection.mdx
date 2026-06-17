@@ -1,6 +1,9 @@
 import { TimelineSection, Step } from "@/components/timelineSection";
+import Button from "@/components/button";
+import CalendlyEmbed from "@/components/calendyForm";
 
-<TimelineSection />
+<div className="flex flex-col w-full  justify-center items-center mb-12 ">
+<TimelineSection >
 
 <Step number="1" title="Lancement" align="left">
 C'est parti ! Vous avez décidé d'investir dans votre activité en lui offrant un site efficace et rentable.
@@ -50,3 +53,32 @@ pendant cette étapes, nous rédigeons les textes que nous vous faisons valider.
 En d’autres termes on **fait les courses à Ikea**.
 
 </Step>
+
+<Step number="5" title="Intégration des contenus" align="left">
+Maintenant que les contenus et la base du site est prêt, nous intégrons tout avec le plus grand soin.
+
+- Optimisation et référencement des images pour le SEO
+- Tests
+- Recettage
+
+En d’autres termes on **accroche la déco**.
+
+</Step>
+
+<Step number="6" title="Mise en ligne" align="right">
+C’est le grand jour ! Votre site part sur l’océan du web. On s’occupe :
+
+- De tester pour voir si tout est ok et corriger les bug si nécessaire
+- Vous former pour reprendre en main votre site
+- Vous accompagner à bien communiquer sur votre site
+
+En d’autres termes on **ouvre les portes aux invités !**
+
+</Step>
+
+</TimelineSection>
+
+<CalendlyEmbed>
+  <Button variant="primary">Je veux ma villa !</Button>
+</CalendlyEmbed>
+</div>
