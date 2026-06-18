@@ -1,0 +1,42 @@
+import { FaqSection, FaqItem } from "@/components/faqSection";
+import Button from "@/components/button";
+import CalendlyEmbed from "@/components/calendyForm";
+
+<div className="flex flex-col w-full  justify-center items-center mb-12 ">
+<FaqSection>
+
+<FaqItem value="item-1" question="Qu'est ce qui est inclus dans le prix ?">
+  Tout le nécessaire pour un site qui convertir : la conception du site et les recherches SEO, 2 propositions de design,
+  la rédaction de contenu optimisé, l’actualisation de votre charte graphique en charte digitale, l’intégration de
+  l’hébergement et du nom de domaine, la configuration technique complète, les pages légales, un back-office adapté et
+  une formation pour gérer votre site en autonomie. Tout ça et bien sûr, une équipe impliquée et réactive.
+</FaqItem>
+
+<FaqItem value="item-2" question="Et si j'ai déjà un site mais que je veux changer ?">
+  C’est tout à fait possible. Nous faisons aussi des refontes de site. Que votre site soit pour l’instant lent, daté ou
+  avec trop de bugs, nous travaillons sur la refonte totale de ce dernier. Un audit nous permets de mieux comprendre vos
+  blocages et vous proposer une solutions adaptées à vos besoins.
+</FaqItem>
+
+<FaqItem
+  value="item-3"
+  question="S’il me manque des visuels, pouvez-vous m’accompagner 
+dessus ?"
+>
+  Le manque de visuels en doit pas être un obstacles pour rendre votre site convertissant. Léa, designeuse et graphiste,
+  vous accompagne avec plaisir dans la créations des visuels qui manquent pour mettre en valeur votre univers et votre
+  savoir-faire.
+</FaqItem>
+
+<FaqItem value="item-4" question="Une fois en ligne il se passe quoi ?">
+  Après la mise en ligne, nous vous accompagnons sur la prise en main de ce dernier. Nous vous formons pendant 1heure
+  sur la compréhension du Back-office pour que vous soyez autonome. Cette formation est suivit de l’envoie d’un PDF
+  tuto.
+</FaqItem>
+
+</FaqSection>
+
+<CalendlyEmbed>
+  <Button variant="primary">Prendre RDV</Button>
+</CalendlyEmbed>
+</div>
