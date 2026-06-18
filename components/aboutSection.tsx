@@ -76,7 +76,7 @@ export default function AboutSection({
           <h1 className="font-dm-serif text-3xl md:text-h2 text-palmier text-center lg:text-left mb-3">
             {wishListTitle}
           </h1>
-          <p className="text-center lg:text-left text-normal mb-3">{wishListDescription}</p>
+          <p className="text-center lg:text-left text-normal mb-6">{wishListDescription}</p>
           {wishesList && (
             <div className="flex flex-col gap-4">
               {wishesList.map((wish, index) => (
