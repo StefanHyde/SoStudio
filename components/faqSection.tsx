@@ -26,7 +26,7 @@ export function FaqItem({ value, question, children }: FaqItemProps) {
         {question}
       </AccordionTrigger>
 
-      <AccordionContent className="overflow-hidden text-sm transition-all data-[state=open]:h-auto">
+      <AccordionContent className=" text-sm transition-all data-[state=open]:h-auto">
         <div className="prose text-normal text-noir pb-6 w-full  text-left [&_ul]:list-disc [&_ul]:pl-5">
           {children}
         </div>
