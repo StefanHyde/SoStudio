@@ -152,3 +152,25 @@
 .prose li::marker {
   color: #3b4c4e !important;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffdaca;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8552;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5314;
+}
+
+/* Firefox fix */
+html {
+  scrollbar-color: #ff8552 #ffdaca;
+}
