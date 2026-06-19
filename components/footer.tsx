@@ -2,6 +2,8 @@ import Image from "next/image";
 import footerLogo from "@/images/logox2.png";
 import orangeLogo from "@/images/logotype2.png";
 
+import { LegalModal } from "@/components/legalsModal";
+
 import { socials } from "@/lib/data/socials";
 
 export default function Footer() {
@@ -27,7 +29,10 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <p className="text-xs md:text-p text-plage">Copyright &copy; {new Date().getFullYear()} So Studio</p>
+      <p className="text-xs md:text-p text-plage mb-3">Copyright &copy; {new Date().getFullYear()} So Studio</p>
+      <div className="text-xs md:text-p text-plage opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+        <LegalModal />
+      </div>
       <Image src={orangeLogo} height={52} alt="Logo Studio Owl" className="absolute  bottom-8 right-8" />
     </div>
   );
