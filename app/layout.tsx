@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { DM_Serif_Display, Public_Sans, Geist } from "next/font/google";
 import "./globals.css";
 
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
+
 import Header from "../components/header";
 import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const DmSerif = DM_Serif_Display({
   variable: "--font-dm-serif",
@@ -30,7 +32,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", DmSerif.variable, publicSans.variable, "font-sans", geist.variable)}>
+    <html
+      lang="en"
+      className={cn("h-full", "antialiased", DmSerif.variable, publicSans.variable, "font-sans", geist.variable)}
+    >
+      <GoogleTagManager gtmId="GTM-M747NXG" />
+      <GoogleAnalytics gaId="G-JZF4600W50" />
+
       <body className="min-h-full flex flex-col">
         <Header />
         {children}
