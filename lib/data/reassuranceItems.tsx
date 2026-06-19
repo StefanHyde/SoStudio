@@ -19,12 +19,12 @@ export const reassuranceItems: items[] = [
   {
     icon: handIcon,
     title: "Prise en main",
-    description: "Devenez autonomes avec un site facile à reprendre en main, sans prise de tête.",
+    description: "Devenez autonome avec un site facile à reprendre en main, sans prise de tête.",
   },
   {
     icon: umbrellaIcon,
     title: "Conseil",
-    description: "Des échanges réguliers et un accompagnement sur vos tunnels de conversions",
+    description: "Des échanges réguliers et un accompagnement sur vos tunnels de conversion",
   },
   {
     icon: iceIcon,
@@ -44,7 +44,7 @@ export const reassuranceItems: items[] = [
   {
     icon: shieldIcon,
     title: "RGPD",
-    description: "Pour sécuriser votre site et le rendre conformes aux normes européennes.",
+    description: "Pour sécuriser votre site et le rendre conforme aux normes européennes.",
   },
   {
     icon: phoneIcon,

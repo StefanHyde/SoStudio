@@ -12,13 +12,13 @@ interface reviews {
 export const customerReviews: reviews[] = [
   {
     review:
-      "Merci pour le site, il correspond tout à fait à mes besoins. Cce site m’a permis de gagner plus de clients qualifiés, tout en respectant mon univers.",
+      "Merci pour le site, il correspond tout à fait à mes besoins. Ce site m’a permis de gagner plus de clients qualifiés, tout en respectant mon univers.",
     name: "Salomé",
     picture: exempleImg,
   },
   {
     review:
-      "Léa et Stéphane m'ont accompagnés étape par étape tout le long de la création de mon nouveau site we. Ils sont dynamiques, professionnels, et créatifs. Je ne saurais que vous les recommander.",
+      "Léa et Stéphane m'ont accompagnés étape par étape tout le long de la création de mon nouveau site web. Ils sont dynamiques, professionnels, et créatifs. Je ne saurais que vous les recommander.",
     name: "Hélène",
     picture: exempleImg2,
   },
