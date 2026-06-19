@@ -24,7 +24,7 @@ const publicSans = Public_Sans({
 export const metadata: Metadata = {
   title: "So Studio - On fait des sites efficaces & rentables",
   description:
-    "Spécialistes du web et de la com', nous vous proposons des sites internet aussi efficaces que rentables pour convertir au mieux !",
+    "Vous voulez faire un site web ? Spécialistes du web et de la com’ nous vous proposons des solutions aussi efficaces que rentables pour convertir vos prospects !",
   keywords:
     "création de sites web, création de sites internet, solutions pour convertir, web design, developpement web, site Wordpress, site e-commerce",
 };
