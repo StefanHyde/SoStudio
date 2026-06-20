@@ -21,7 +21,7 @@ export default function ReassuranceSection() {
             className="flex  flex-col items-center justify-center h-77 md:h-auto p-4 md:p-6 gap-4 bg-blanc shadow-md/20 rounded-md"
           >
             <Image src={item.icon} height={40} width={40} alt={item.title} className="object-cover" />
-            <h2 className="font-dm-serif text-xl xl:text-h2 text-palmier">{item.title}</h2>
+            <h2 className="font-dm-serif text-center text-xl xl:text-h2 text-palmier">{item.title}</h2>
             <p className="text-center text-normal">{item.description}</p>
           </div>
         ))}
