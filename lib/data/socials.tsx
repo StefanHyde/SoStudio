@@ -2,7 +2,7 @@ import { IconType } from "react-icons";
 import { IoLogoInstagram } from "react-icons/io5";
 import { SiSubstack } from "react-icons/si";
 import { FaSpotify } from "react-icons/fa6";
-import { FaPinterest, FaTwitch } from "react-icons/fa";
+import { FaPinterest, FaTwitch, FaYoutube } from "react-icons/fa";
 
 interface socials {
   name: string;
@@ -17,6 +17,12 @@ export const socials: socials[] = [
     url: "https://www.instagram.com/so.studio_siteweb",
     icon: IoLogoInstagram,
     iconColor: "text-corail",
+  },
+  {
+    name: "YouTube",
+    url: "https://www.youtube.com/@SooooStudio",
+    icon: FaYoutube,
+    iconColor: "text-sable",
   },
   {
     name: "Spotify",
