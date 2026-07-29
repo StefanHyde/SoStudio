@@ -56,6 +56,13 @@ export async function getValidInstagramToken(): Promise<string> {
   return tokenRecord.accessToken;
 }
 
+export interface InstagramMediaChild {
+  id: string;
+  media_type: "IMAGE" | "VIDEO";
+  media_url: string;
+  thumbnail_url?: string;
+}
+
 export interface InstagramPost {
   id: string;
   caption?: string;
@@ -64,20 +71,52 @@ export interface InstagramPost {
   permalink: string;
   thumbnail_url?: string;
   timestamp: string;
+  children?: {
+    data: InstagramMediaChild[];
+  };
 }
 
 // Get IG posts
-export async function getInstagramPosts(): Promise<InstagramPost[]> {
+export async function getInstagramPosts(limit = 3): Promise<InstagramPost[]> {
   try {
     const token = await getValidInstagramToken();
 
     const res = await fetch(
-      `https://graph.instagram.com/${INSTAGRAM_USER_ID}/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp&access_token=${token}`,
+      `https://graph.instagram.com/${INSTAGRAM_USER_ID}/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,children{media_url,media_type,thumbnail_url}&limit=${limit}&access_token=${token}`,
       { next: { revalidate: 3600 } },
     );
 
     const data = await res.json();
-    return data.data || [];
+    const rawPosts: InstagramPost[] = data.data || [];
+
+    const postsWithThumbnails = rawPosts.map((post) => {
+      let display_url = post.media_url;
+
+      if (post.media_type === "VIDEO") {
+        display_url = post.thumbnail_url || post.media_url;
+      }
+
+      if (post.media_type === "CAROUSEL_ALBUM" && post.children && post.children.data.length > 0) {
+        const firstChild = post.children.data[0];
+
+        if (firstChild.media_type === "VIDEO") {
+          display_url = firstChild.thumbnail_url || firstChild.media_url;
+        } else {
+          display_url = firstChild.media_url;
+        }
+      }
+
+      if (display_url?.includes(".mp4") && post.thumbnail_url) {
+        display_url = post.thumbnail_url;
+      }
+
+      return {
+        ...post,
+        display_url,
+      };
+    });
+
+    return postsWithThumbnails;
   } catch (error) {
     console.error("Impossible to load IG data:", error);
     return [];
