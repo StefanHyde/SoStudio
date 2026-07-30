@@ -70,6 +70,7 @@ export interface InstagramPost {
   media_url: string;
   permalink: string;
   thumbnail_url?: string;
+  display_url?: string;
   timestamp: string;
   children?: {
     data: InstagramMediaChild[];
