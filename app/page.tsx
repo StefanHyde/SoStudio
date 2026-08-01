@@ -6,7 +6,7 @@ import ReassuranceSection from "@/components/reassuranceSection";
 import AboutSection from "@/content/aboutSection.mdx";
 import TimelineSection from "@/content/timelineSection.mdx";
 import FaqSection from "@/content/faqSection.mdx";
-import InstagramFeed from "@/components/instagramFeed";
+import NewsSection from "@/components/newsSection";
 
 import type { Viewport } from "next";
 
@@ -23,7 +23,7 @@ export default function Home() {
       <AboutSection />
       <TimelineSection />
       <FaqSection />
-      <InstagramFeed />
+      <NewsSection />
     </div>
   );
 }

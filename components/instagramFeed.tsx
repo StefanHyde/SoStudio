@@ -7,7 +7,7 @@ export default async function InstagramFeed() {
   const posts = await getInstagramPosts();
 
   return (
-    <div className="w-full lg:w-3xl  py-12 px-4 grid grid-cols-3 gap-1 lg:gap-6 ">
+    <div className="grid grid-cols-3 gap-1 lg:gap-6 ">
       {posts.map((post) => {
         const imageUrl = post.display_url || post.thumbnail_url;
         if (!imageUrl) {
@@ -20,7 +20,7 @@ export default async function InstagramFeed() {
             href={post.permalink}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative group block border-4 md:border-6 border-orange/90 h-48 md:h-60 overflow-hidden rounded-lg"
+            className="relative group block border-4  border-orange/90 h-48 md:h-60 overflow-hidden rounded-lg"
           >
             {imageUrl && (
               <Image
