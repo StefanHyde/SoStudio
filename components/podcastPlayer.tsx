@@ -33,11 +33,10 @@ export default function PodcastPlayer() {
   });
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-2 bg-blanc border-2 border-orange rounded-lg my-6 ">
+    <div className="w-full max-w-2xl mx-auto p-4 md:p-2 bg-blanc border-2 border-orange rounded-lg my-6 overflow-hidden">
       <div className="flex flex-col md:flex-row gap-6 items-center">
-        {/* Pochette du Podcast */}
         {episode.cover && (
-          <div className="relative shrink-0 overflow-hidden rounded-xl group">
+          <div className="hidden md:flex relative shrink-0 overflow-hidden rounded-xl group">
             <Image
               src={episode.cover}
               alt={episode.title}
@@ -48,21 +47,18 @@ export default function PodcastPlayer() {
           </div>
         )}
 
-        {/* Détails de l'épisode */}
-        <div className="flex-1 flex flex-col justify-between space-y-3 text-left">
+        <div className="w-full flex-1 flex flex-col justify-between space-y-3 text-left">
           <div>
             <span className="text-xs font-semibold tracking-wider text-palmier">
               Notre dernier épisode • {formattedDate}
             </span>
-            <h3 className="text-xl font-bold text-nuit mt-1 line-clamp-1">{episode.title}</h3>
+            <h3 className="text-xl font-bold text-nuit mt-1 line-clamp-2">{episode.title}</h3>
             <p className="text-xs text-nuit mt-2 line-clamp-2 leading-relaxed">{episode.description}</p>
           </div>
 
           {episode.audioUrl && (
             <div className="pt-2">
-              <audio controls src={episode.audioUrl} className="w-full h-10 accent-emerald-500 rounded-lg">
-                Votre navigateur ne supporte pas le lecteur audio.
-              </audio>
+              <audio controls src={episode.audioUrl} className="w-full h-10  rounded-lg" />
             </div>
           )}
         </div>
