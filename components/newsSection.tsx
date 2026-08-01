@@ -11,7 +11,7 @@ export default function NewsSection() {
       <div className="flex justify-center">
         <a
           href={instagramUrl}
-          className="inline-flex items-center gap-2 text-orange border border-orange p-1 rounded-md mt-6 hover:bg-orange hover:text-blanc duration-300 ease-in-out"
+          className="inline-flex items-center gap-2 text-orange border border-orange p-2 rounded-md mt-6 hover:bg-orange hover:text-blanc duration-300 ease-in-out"
         >
           Suivez nous sur Instagram <IoLogoInstagram />
         </a>
