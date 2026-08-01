@@ -13,6 +13,19 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "*.fbcdn.net",
       },
+
+      {
+        protocol: "https",
+        hostname: "i.scdn.co",
+      },
+      {
+        protocol: "https",
+        hostname: "d3t3ozftmdmh3i.cloudfront.net",
+      },
+      {
+        protocol: "https",
+        hostname: "*.cloudfront.net",
+      },
     ],
   },
 };

@@ -7,7 +7,7 @@ export default async function InstagramFeed() {
   const posts = await getInstagramPosts();
 
   return (
-    <div className="grid grid-cols-3 gap-1 lg:gap-6 ">
+    <div className="grid grid-cols-3 gap-1 lg:gap-6 my-6 ">
       {posts.map((post) => {
         const imageUrl = post.display_url || post.thumbnail_url;
         if (!imageUrl) {
