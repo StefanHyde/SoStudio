@@ -14,7 +14,7 @@ export default function Header() {
         <Image src={logo} alt="Logo Studio Owl" height={38} className="object-contain h-8 md:h-full" priority />
       </div>
       <CalendlyEmbed>
-        <Button variant="primary">Prendre RDV</Button>
+        <Button variant="primary">Audit gratuit</Button>
       </CalendlyEmbed>
     </header>
   );

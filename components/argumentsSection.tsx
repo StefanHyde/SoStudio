@@ -48,7 +48,7 @@ export default function ArgumentsSection({
         {imagePosition === "left" ? (
           <CalendlyEmbed>
             <div className="flex justify-center md:justify-start">
-              <Button variant="primary">Prendre RDV</Button>
+              <Button variant="primary">Audit gratuit</Button>
             </div>
           </CalendlyEmbed>
         ) : (
