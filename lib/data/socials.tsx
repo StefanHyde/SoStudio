@@ -30,7 +30,7 @@ export const socials: socials[] = [
     icon: FaSpotify,
     iconColor: "text-teal-900",
   },
-  { name: "Pinterest", url: "https://pin.it/PTWSuBbiP", icon: FaPinterest, iconColor: "text-corail" },
-  { name: "Twithc", url: "https://www.twitch.tv/soostudio", icon: FaTwitch, iconColor: "text-mer" },
-  { name: "Substack", url: "https://substack.com/@sostudio", icon: SiSubstack, iconColor: "text-orange" },
+  //{ name: "Pinterest", url: "https://pin.it/PTWSuBbiP", icon: FaPinterest, iconColor: "text-corail" },
+  { name: "Twitch", url: "https://www.twitch.tv/soostudio", icon: FaTwitch, iconColor: "text-mer" },
+  //{ name: "Substack", url: "https://substack.com/@sostudio", icon: SiSubstack, iconColor: "text-orange" },
 ];
