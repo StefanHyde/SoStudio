@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import CustomerReviews from "@/components/customerReviews";
+import FreebieSection from "@/components/freebieSection";
 import ArgumentsSection from "@/content/argumentsSection.mdx";
 import ProductsSection from "@/content/productsSection.mdx";
 import ReassuranceSection from "@/components/reassuranceSection";
@@ -17,6 +18,7 @@ export default function Home() {
     <div className="flex flex-col flex-1 items-center justify-center font-sans bg-plage">
       <Hero />
       <CustomerReviews />
+      <FreebieSection />
       <ArgumentsSection />
       <ProductsSection />
       <ReassuranceSection />
