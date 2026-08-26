@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { firstName, lastName, email, societyStatus } = body;
 
-    if (!firstName || !lastName || !email || !societyStatus) {
+    if (!lastName || !firstName || !email || !societyStatus) {
       return NextResponse.json({ error: "Champs manquants" }, { status: 400 });
     }
 
@@ -21,8 +21,8 @@ export async function POST(request: Request) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        prenom: firstName,
         nom: lastName,
+        prenom: firstName,
         email: email,
         statut: societyStatus,
         Created: new Date().toISOString(),
