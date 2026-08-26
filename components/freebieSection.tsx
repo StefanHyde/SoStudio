@@ -4,7 +4,7 @@ import DocImg from "@/images/Doc.png";
 
 export default function FreebieSection() {
   return (
-    <div className="flex flex-col md:flex-row w-full md:w-3/4 lg:w-1/2 justify-between items-center last:mb-12 py-12 px-8 gap-8">
+    <div className="flex flex-col md:flex-row w-full md:w-3/5  justify-between items-center last:mb-12 py-12 px-8 gap-8">
       <Image
         src={DocImg}
         height={410}
