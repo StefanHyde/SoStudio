@@ -5,7 +5,12 @@ import path from "path";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { firstName, lastName, email, societyStatus } = body;
+    const { firstName, lastName, email, societyStatus, website } = body;
+
+    // Honeypot
+    if (website) {
+      return NextResponse.json({ message: "Succès" }, { status: 200 });
+    }
 
     if (!lastName || !firstName || !email || !societyStatus) {
       return NextResponse.json({ error: "Champs manquants" }, { status: 400 });

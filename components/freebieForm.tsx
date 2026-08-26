@@ -10,6 +10,7 @@ export default function FreebieForm() {
     lastName: "",
     email: "",
     societyStatus: "",
+    website: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -19,6 +20,12 @@ export default function FreebieForm() {
     e.preventDefault();
     setLoading(true);
     setError(null);
+
+    // Honeypot
+    if (formData.website) {
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch("/api/freebie", {
@@ -50,6 +57,19 @@ export default function FreebieForm() {
   return (
     <div className="flex justify-center items-center w-full">
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+        {/* Honeypot */}
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="website">Ne pas remplir ce champ</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={formData.website}
+            onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+          />
+        </div>
         <label htmlFor="lastName" className="flex flex-col">
           <span className="text-nuit text-xs font-public">Nom</span>
           <input
