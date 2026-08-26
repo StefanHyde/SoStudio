@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import Button from "@/components/button";
+
 export default function FreebieForm() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -46,41 +48,53 @@ export default function FreebieForm() {
     }
   };
   return (
-    <div style={{ maxWidth: "400px", margin: "40px auto", fontFamily: "sans-serif" }}>
-      <h2>Test du Freebie</h2>
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-        <input
-          type="text"
-          placeholder="Prénom"
-          value={formData.firstName}
-          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Nom"
-          value={formData.lastName}
-          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Status de votre entreprise"
-          value={formData.societyStatus}
-          onChange={(e) => setFormData({ ...formData, societyStatus: e.target.value })}
-          required
-        />
+    <div className="flex justify-center items-center w-full">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+        <label htmlFor="lastName" className="flex flex-col">
+          <span className="text-nuit text-xs font-public">Nom</span>
+          <input
+            type="text"
+            value={formData.lastName}
+            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+            required
+            className="block w-full mt-1 p-1 border border-orange rounded-sm focus:ring-1 focus:ring-orange focus:outline-none bg-blanc duration-300"
+          />
+        </label>
+        <label htmlFor="firstName" className="flex flex-col">
+          <span className="text-nuit text-xs font-public">Prénom</span>
 
-        <button type="submit" disabled={loading} style={{ padding: "10px", cursor: "pointer" }}>
-          {loading ? "Téléchargement..." : "Tester le formulaire"}
-        </button>
+          <input
+            type="text"
+            value={formData.firstName}
+            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+            required
+            className="block w-full mt-1 p-1 border border-orange rounded-sm focus:ring-1 focus:ring-orange focus:outline-none bg-blanc duration-300"
+          />
+        </label>
+        <label htmlFor="email" className="flex flex-col">
+          <span className="text-nuit text-xs font-public">Email</span>
+          <input
+            type="email"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            required
+            className="block w-full mt-1 p-1 border border-orange rounded-sm focus:ring-1 focus:ring-orange focus:outline-none bg-blanc duration-300"
+          />
+        </label>
+        <label htmlFor="societyStatus" className="flex flex-col">
+          <span className="text-nuit text-xs font-public">Statut de votre entreprise</span>
+          <input
+            type="text"
+            value={formData.societyStatus}
+            onChange={(e) => setFormData({ ...formData, societyStatus: e.target.value })}
+            required
+            className="block w-full mt-1 p-1 border border-orange rounded-sm focus:ring-1 focus:ring-orange focus:outline-none bg-blanc duration-300"
+          />
+        </label>
+
+        <Button variant="tertiary" disabled={loading}>
+          {loading ? "Téléchargement..." : "Je récupère mon freebie"}
+        </Button>
       </form>
 
       {error && <p style={{ color: "red", marginTop: "10px" }}>⚠️ {error}</p>}
