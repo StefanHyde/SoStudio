@@ -48,7 +48,7 @@ export default function AboutSection({
       <h1 className="font-dm-serif text-5xl md:text-h1 text-palmier text-center">Soo bien accompagné</h1>
       <div className="relative flex  flex-col justify-center items-center w-full md:w-2/3  bg-blanc shadow-md/20 rounded-md p-8 pt-24 lg:p-24 mt-20">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
-          <div className="border-4 md:border-6 border-orange rounded-full overflow-hidden h-20 w-20 md:h-32 md:w-32 z-10 -mr-4 md:-mr-6">
+          <div className="border-6 border-orange rounded-full overflow-hidden h-40 w-40 md:h-32 md:w-32 z-10 -mr-4 md:-mr-6">
             <Image
               src={StephleaPicture}
               height={120}
